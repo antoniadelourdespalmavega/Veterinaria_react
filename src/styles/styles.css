@@ -1,0 +1,350 @@
+/* Paleta Vívida y Contrastada */
+:root {
+    --azul-petroleo: #1B6A9A;
+    --azul-petroleo-hover: #145075;
+    --verde-vivo: #38A169;
+    --verde-vivo-hover: #2F855A;
+    --crema-fondo: #FAF6EE;
+    --crema-alt: #F3ECE0;
+    --blanco: #FFFFFF;
+    --texto-oscuro: #1A202C;
+}
+
+/* Scroll suave para los botones que bajan por la página */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fondo general y color de texto */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--texto-oscuro);
+    background-color: var(--crema-fondo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* Header & Navegación */
+header {
+    background-color: var(--blanco) !important;
+    border-bottom: 2px solid rgba(27, 106, 154, 0.12);
+}
+
+header nav.navbar {
+    padding-top: 0.35rem !important;
+    padding-bottom: 0.35rem !important;
+}
+
+.brand-title {
+    color: var(--azul-petroleo) !important;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--texto-oscuro) !important;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--azul-petroleo) !important;
+}
+
+/* Logo en Header */
+.nav-logo {
+    height: 75px !important;
+    max-height: 75px !important;
+    width: auto !important;
+    object-fit: contain;
+    display: inline-block;
+}
+
+/* Logo en Footer */
+.footer-logo {
+    height: 44px !important;
+    width: 44px !important;
+    max-width: 44px !important;
+    max-height: 44px !important;
+    object-fit: contain;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 3px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+}
+
+/* Botones con colores vivos */
+/*El uso de !important anula el color azul por defecto de Bootstrap (#0d6efd) para forzar tu color*/
+.btn-primary-custom {
+    background-color: var(--azul-petroleo) !important;
+    border-color: var(--azul-petroleo) !important;
+    color: var(--blanco) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--azul-petroleo-hover) !important;
+    border-color: var(--azul-petroleo-hover) !important;
+    transform: translateY(-2px);
+}
+
+.btn-secondary-custom {
+    background-color: var(--verde-vivo) !important;
+    border-color: var(--verde-vivo) !important;
+    color: var(--blanco) !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary-custom:hover {
+    background-color: var(--verde-vivo-hover) !important;
+    border-color: var(--verde-vivo-hover) !important;
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid var(--blanco) !important;
+    color: var(--blanco) !important;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-custom:hover {
+    background-color: var(--blanco) !important;
+    color: var(--azul-petroleo) !important;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, rgba(27, 106, 154, 0.90), rgba(15, 60, 89, 0.92)), 
+                url('https://previews.123rf.com/images/stieberszabolcs/stieberszabolcs1712/stieberszabolcs171200188/92232658-cat-and-dog-looking-in-the-camera-on-a-white-background.jpg') center/cover no-repeat;
+    min-height: 480px;
+}
+
+.badge-custom {
+    background-color: var(--verde-vivo) !important;
+    color: var(--blanco);
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 10px rgba(56, 161, 105, 0.3);
+}
+
+/* Secciones y Fondos */
+.bg-crema-alt {
+    background-color: var(--crema-alt) !important;
+}
+
+.section-title {
+    color: var(--azul-petroleo);
+}
+
+/* Sección Sobre Nosotros */
+.about-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.about-experience-badge {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    background-color: var(--azul-petroleo);
+    min-width: 150px;
+    border: 3px solid var(--blanco);
+}
+
+/* Imagen Limpia de Atención Clínica */
+.commitment-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Tarjetas de servicios */
+.service-card {
+    background-color: var(--blanco);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(27, 106, 154, 0.06);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(27, 106, 154, 0.15) !important;
+}
+
+/* Tarjetas del Equipo de Especialistas */
+.team-card {
+    background-color: var(--blanco);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(27, 106, 154, 0.15) !important;
+}
+
+/*Controla la proporción de la imagen dentro de la tarjeta de Bootstrap. 
+Al envolver la imagen en .team-img-wrapper, evita que fotos de diferentes 
+tamaños desarmen la alineación de las columnas del grid.*/
+.team-img-wrapper {
+    height: 250px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-img {
+    transform: scale(1.05);/* Efecto zoom en la foto del médico */
+}
+
+/* Cajas de iconos */
+.icon-box {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(56, 161, 105, 0.15);
+    color: var(--verde-vivo);
+}
+
+.icon-accent {
+    color: var(--verde-vivo);
+}
+
+.icon-main {
+    color: var(--azul-petroleo);
+}
+
+/* Sección de Suscripción */
+.subscription-section {
+    background: linear-gradient(135deg, var(--azul-petroleo), #145075);
+}
+
+/* Footer */
+footer {
+    background-color: #122B3B !important;
+}
+
+.hover-link {
+    transition: color 0.2s ease;
+}
+
+.hover-link:hover {
+    color: var(--verde-vivo) !important;
+}
+
+/* Ajustes Responsive */
+/*Ajusta la escala de imágenes, textos y contenedores específicamente cuando la pantalla es menor a 768 píxeles (celulares y tabletas)*/
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 380px;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem; /* Reduce el título principal */
+    }
+
+    .nav-logo {
+        height: 55px !important; /* Achica el logo */
+        max-height: 55px !important;
+    }
+
+    .about-img {
+        height: 280px; /* Adapta la altura de las imágenes */
+    }
+
+    .commitment-img {
+        height: 260px;
+    }
+
+    .team-img-wrapper {
+        height: 230px;
+    }
+
+    /*En escritorio (> 768px): Bootstrap muestra las columnas lado a lado 
+    (ej. .col-lg-6 ubica la imagen a la izquierda y el texto a la derecha)
+     con alturas de imagen fijas de hasta 420px.
+    En celular (≤ 768px): Las columnas de Bootstrap se apilan verticalmente. 
+    Tu @media ajusta automáticamente la altura de .about-img a 280px y .team-img-wrapper 
+    a 230px para evitar que las imágenes ocupen toda la pantalla del teléfono y 
+    el usuario tenga que desplazarse demasiado.*/
+}
+/* ---- Ajustes para React: el contenedor raiz ocupa toda la pantalla ---- */
+#root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#root > main {
+    flex: 1;
+}
+
+/* Los enlaces activos de la navbar usan la clase "active" de NavLink */
+.nav-link.active {
+    color: var(--azul-petroleo) !important;
+}
+
+/* ---- Navegacion por pestañas del panel de recepcion (estilo segmentado) ---- */
+.segmented-tabs-wrapper {
+    background-color: #f1f5f9;
+    padding: 4px;
+    border-radius: 9999px;
+    display: inline-flex;
+    gap: 4px;
+    border: 1px solid #e2e8f0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+.segmented-tabs-wrapper .nav {
+    flex-wrap: nowrap;
+}
+.segmented-tabs-wrapper .nav-link {
+    color: #475569 !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 9999px;
+    border: none;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+.segmented-tabs-wrapper .nav-link:hover {
+    color: #0f172a !important;
+}
+.segmented-tabs-wrapper .nav-link.active {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.segmented-tabs-wrapper .nav-link.active i {
+    color: #2563eb;
+}
